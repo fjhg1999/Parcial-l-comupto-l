@@ -1,3 +1,9 @@
+EJerccio 1
+para una tienda como la de doña mary se solicito un programa que pudiera registrar las ventas que se hacen ingresando el dinero
+recibido y la cantidad de vuelto que se le da al cliente para eso utilizamos un programa donde los datos se guarden en listas
+para poder consultarlos en cualquier momento asi, tambien ingresar datos de los productos traidos por los proveedores a la tienda
+
+
 
 Ejercicio 2
 para un sistema de registro de asistencia que solicita la asistencia de cada estudiante, 
@@ -6,7 +12,11 @@ una letra para tomar los datos y en caso del permiso debera ingresar la razon de
 permitiendo al docente ingresar la asistencia de cada estudiante y capturar la razón si es necesario Cabe aclarar que todo los datos
 se ingresarian por medio de consola habria que desarrollar una interfaz grafica para el usuario final
 
-
+Ejercicio 3
+se solicita hacer el sistema para un hotel donde se puedan realizar reservaciones y mostrar dichas reservaciones para eso
+creamos un programa que utliza un menu de opciones y listas para guardar la informacion que se le va solicitando a el cliente
+tambien se le muestran los precios de cada tipo de paquete o servicio extra al final mostrando un total de los servicios reservados y un total
+del costo de la reserva
 
 Ejercicio 4
 Para la situación presentada, donde una empresa tiene dos tipos de empleados (empleados de plaza fija y empleados por horas),
