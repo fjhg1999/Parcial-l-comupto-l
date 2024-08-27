@@ -8,8 +8,9 @@ class Hotel:
         }
         # Servicios extra y sus precios
         self.serviciosextra = {
-            'Uso de la Piscina': 20.0,
-            'Cancha de Golf': 50.0
+            'uso de la piscina': 20.0,
+            'cancha de golf': 50.0,
+            'ping pong': 20.5
         }
         # Lista para almacenar las reservas realizadas
         self.reservas = []
@@ -48,7 +49,7 @@ class Hotel:
             servicio = input("Seleccione un servicio extra (o 'fin' para terminar): ")
             if servicio.lower() == 'fin':
                 break
-            if servicio in self.servicios_extra:
+            if servicio in self.serviciosextra:
                 serviciosseleccionados.append(servicio)
             else:
                 print("Servicio no válido. Intente de nuevo.")
@@ -56,7 +57,7 @@ class Hotel:
         # Calcula el costo total
         preciohabitacion = self.habitaciones[eleccionhabitacion]
         costohabitacion = preciohabitacion * noches
-        costoservicios = sum(self.servicios_extra[servicio] for servicio in serviciosseleccionados)
+        costoservicios = sum(self.serviciosextra[servicio] for servicio in serviciosseleccionados)
         totalfactura = costohabitacion + costoservicios
         
         # Almacena la reserva
@@ -96,7 +97,7 @@ class Hotel:
             print(f"Costo de Habitación: ${reserva['costohabitacion']:.2f}")
             print("Servicios Extras:")
             for servicio in reserva['servicios']:
-                print(f"  {servicio}: ${self.servicios_extra[servicio]:.2f}")
+                print(f"  {servicio}: ${self.serviciosextra[servicio]:.2f}")
             print(f"Costo de Servicios Extras: ${reserva['costoservicios']:.2f}")
             print(f"Total a Pagar: ${reserva['total']:.2f}")
 
