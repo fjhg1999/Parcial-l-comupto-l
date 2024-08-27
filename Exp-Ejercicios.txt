@@ -1,6 +1,7 @@
 
 Ejercicio 2
 para un sistema de registro de asistencia que solicita la asistencia de cada estudiante, 
-guarda los registros, y permite al docente generar reportes. Este código se enfoca en la interacción sencilla
+guarda los registros, y permite al docente generar reportes. Este código se enfoca en la interacción sencilla ya que solo ingresara 
+una letra para tomar los datos y en caso del permiso debera ingresar la razon de dicho permiso
 permitiendo al docente ingresar la asistencia de cada estudiante y capturar la razón si es necesario Cabe aclarar que todo los datos
 se ingresarian por medio de consola habria que desarrollar una interfaz grafica para el usuario final
