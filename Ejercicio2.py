@@ -25,9 +25,9 @@ class Docente:
                 estado = "Inasistencia"
             elif estado == 'R':
                 estado = "Permiso"
-                motivo = input("Ingrese la razón del permiso: ")
+                motivo = input("Ingrese el motivo del permiso: ")
             else:
-                print("Estado no válido. Se registrará como 'Inasistencia'.")
+                print("Ingrese una opcion valida si no se tomara como 'Inasistencia'.")
                 estado = "Inasistencia"
             estudiante.registro_asi(estado, motivo)
             print(f"Asistencia registrada para {nombre}: {estado}. Motivo: {motivo if motivo else 'Ninguno'}.\n")
@@ -42,8 +42,8 @@ class Docente:
 
 # Ejemplo de uso
 estudiante1 = Estudiante("Juan Pérez")
-estudiante2 = Estudiante("Ana Gómez")
-estudiante3 = Estudiante("Carlos Ramírez")
+estudiante2 = Estudiante("Yajaira Claros")
+estudiante3 = Estudiante("Jose Alvaro")
 docente = Docente("Profesor García", [estudiante1, estudiante2, estudiante3])
 
 # Tomar asistencia
