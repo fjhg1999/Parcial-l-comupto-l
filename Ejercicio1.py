@@ -4,7 +4,7 @@ class Tienda:
         # Lista para almacenar las ventas realizadas
         self.ventas = []
 
-    # Método para registrar una nueva venta
+    # Metodo para registrar una nueva venta
     def registrarventa(self):
         print("Registro de venta:")
         ventaactual = []
@@ -41,7 +41,7 @@ class Tienda:
         self.ventas.append(ventaactual)
         print("Venta registrada con éxito.\n")
 
-    # Método para mostrar todas las ventas registradas
+    # Metodo para mostrar todas las ventas registradas
     def mostrarventas(self):
         if not self.ventas:
             print("No hay ventas registradas.")
@@ -50,6 +50,7 @@ class Tienda:
             print(f"\nVenta {idx + 1}:")
             for item in venta:
                 print(f"Producto: {item[0]}, Cantidad: {item[1]}, Precio Unitario: ${item[2]:.2f}, Total: ${item[3]:.2f}")
+                print("-----------------------------------------")
             # Calcula el total de la venta
             total_venta = sum(item[3] for item in venta)
             print(f"Total de la venta: ${total_venta:.2f}")
@@ -60,7 +61,7 @@ class Proveedor:
         # Diccionario para almacenar el inventario de productos
         self.inventario = {}
 
-    # Método para registrar un nuevo producto de proveedor
+    # Metodo para registrar un nuevo producto de proveedor
     def registrarproducto(self):
         print("Registro de producto:")
         # Solicita el nombre del producto
@@ -80,7 +81,7 @@ class Proveedor:
         
         print(f"Producto {producto} registrado con éxito.\n")
 
-    # Método para mostrar el inventario de productos
+    # Metodo para mostrar el inventario de productos
     def mostrarinventario(self):
         if not self.inventario:
             print("El inventario está vacío.")
@@ -89,7 +90,7 @@ class Proveedor:
         for producto, detalles in self.inventario.items():
             print(f"Producto: {producto}, Cantidad: {detalles['cantidad']}, Precio Sugerido: ${detalles['preciosugerido']:.2f}")
 
-# Función principal que ejecuta el programa
+# Funcion principal que ejecuta el programa
 def main():
     # Crea instancias de las clases Tienda y Proveedor
     tienda = Tienda()
@@ -97,12 +98,14 @@ def main():
     
     while True:
         # Muestra el menú de opciones
+        print("-----------------------------------------")
         print("Menú:")
         print("1. Registrar venta")
         print("2. Mostrar ventas")
         print("3. Registrar producto de proveedor")
         print("4. Mostrar inventario")
         print("5. Salir")
+        print("-----------------------------------------")
         
         # Solicita al usuario que seleccione una opción
         opcion = int(input("Seleccione una opción: "))

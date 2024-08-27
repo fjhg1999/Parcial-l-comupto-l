@@ -54,10 +54,10 @@ class Hotel:
                 print("Servicio no válido. Intente de nuevo.")
         
         # Calcula el costo total
-        precio_habitacion = self.habitaciones[eleccionhabitacion]
-        costo_habitacion = precio_habitacion * noches
-        costo_servicios = sum(self.servicios_extra[servicio] for servicio in serviciosseleccionados)
-        total_factura = costo_habitacion + costo_servicios
+        preciohabitacion = self.habitaciones[eleccionhabitacion]
+        costohabitacion = preciohabitacion * noches
+        costoservicios = sum(self.servicios_extra[servicio] for servicio in serviciosseleccionados)
+        totalfactura = costohabitacion + costoservicios
         
         # Almacena la reserva
         reserva = {
@@ -65,9 +65,9 @@ class Hotel:
             'habitacion': eleccionhabitacion,
             'noches': noches,
             'servicios': serviciosseleccionados,
-            'costo_habitacion': costo_habitacion,
-            'costo_servicios': costo_servicios,
-            'total': total_factura
+            'costo_habitacion': costohabitacion,
+            'costo_servicios': costoservicios,
+            'total': totalfactura
         }
         self.reservas.append(reserva)
         
@@ -76,12 +76,12 @@ class Hotel:
         print(f"Nombre del Cliente: {nombrecliente}")
         print(f"Habitación: {eleccionhabitacion}")
         print(f"Noches: {noches}")
-        print(f"Costo de Habitación: ${costo_habitacion:.2f}")
+        print(f"Costo de Habitación: ${costohabitacion:.2f}")
         print("Servicios Extras:")
         for servicio in serviciosseleccionados:
-            print(f"  {servicio}: ${self.servicios_extra[servicio]:.2f}")
-        print(f"Costo de Servicios Extras: ${costo_servicios:.2f}")
-        print(f"Total a Pagar: ${total_factura:.2f}")
+            print(f"  {servicio}: ${self.serviciosextra[servicio]:.2f}")
+        print(f"Costo de Servicios Extras: ${costoservicios:.2f}")
+        print(f"Total a Pagar: ${totalfactura:.2f}")
 
     # Método para mostrar todas las reservas
     def mostrar_reservas(self):
@@ -93,21 +93,23 @@ class Hotel:
             print(f"Nombre del Cliente: {reserva['nombre']}")
             print(f"Habitación: {reserva['habitacion']}")
             print(f"Noches: {reserva['noches']}")
-            print(f"Costo de Habitación: ${reserva['costo_habitacion']:.2f}")
+            print(f"Costo de Habitación: ${reserva['costohabitacion']:.2f}")
             print("Servicios Extras:")
             for servicio in reserva['servicios']:
                 print(f"  {servicio}: ${self.servicios_extra[servicio]:.2f}")
-            print(f"Costo de Servicios Extras: ${reserva['costo_servicios']:.2f}")
+            print(f"Costo de Servicios Extras: ${reserva['costoservicios']:.2f}")
             print(f"Total a Pagar: ${reserva['total']:.2f}")
 
 def main():
     hotel = Hotel()
     
     while True:
+        print("-----------------------------------------")
         print("\nMenú:")
         print("1. Realizar Reserva")
         print("2. Mostrar Reservas")
         print("3. Salir")
+        print("-----------------------------------------")
         
         opcion = int(input("Seleccione una opción: "))
         
