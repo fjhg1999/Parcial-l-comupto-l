@@ -5,3 +5,11 @@ guarda los registros, y permite al docente generar reportes. Este código se enf
 una letra para tomar los datos y en caso del permiso debera ingresar la razon de dicho permiso
 permitiendo al docente ingresar la asistencia de cada estudiante y capturar la razón si es necesario Cabe aclarar que todo los datos
 se ingresarian por medio de consola habria que desarrollar una interfaz grafica para el usuario final
+
+
+
+Ejercicio 4
+Para la situación presentada, donde una empresa tiene dos tipos de empleados (empleados de plaza fija y empleados por horas),
+ y se requiere un sistema para calcular la planilla de pago teniendo en cuenta las comisiones, las horas trabajadas y un bono
+adicional para empleados con más de 5 años de antigüedad, la siguiente propuesta de código puede implementar de manera 
+efectiva las funcionalidades 
