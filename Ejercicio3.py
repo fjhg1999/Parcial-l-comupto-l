@@ -84,7 +84,7 @@ class Hotel:
         print(f"Total a Pagar: ${totalfactura:.2f}")
 
     # Método para mostrar todas las reservas
-    def mostrar_reservas(self):
+    def mostrarreservas(self):
         if not self.reservas:
             print("No hay reservas registradas.")
             return
@@ -114,9 +114,9 @@ def main():
         opcion = int(input("Seleccione una opción: "))
         
         if opcion == 1:
-            hotel.realizar_reserva()
+            hotel.realizarreserva()
         elif opcion == 2:
-            hotel.mostrar_reservas()
+            hotel.mostrarreservas()
         elif opcion == 3:
             print("Saliendo del programa.")
             break
